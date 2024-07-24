@@ -3,3 +3,5 @@
 -- 1
 /Ms-Dos/Commands/update.lua
 /Ms-Dos/Commands/ls.lua
+-- 2
+/Startup.lua
