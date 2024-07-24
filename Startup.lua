@@ -19,7 +19,7 @@ write("Ms-Dos ver "..ver..".\n")
 
 while true do
     local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "r")
-    local cwd = Fcwd.readAll():gsub("\n*$","")
+    local cwd = Fcwd.readAll():gsub("\n*$","").."/"
     Fcwd.close()
     local files = Tables.Concat(fs.list("/Ms-Dos/Commands/"), fs.list(cwd))
     
@@ -31,6 +31,7 @@ while true do
     write(cwd.."> ")
     term.setTextColor(colors.green)
     local msg = read(nil, History, function(text) return completion.choice(text, files) end, nil)
+    term.setTextColor(colors.white)
     
     History[#History+1] = msg
     
