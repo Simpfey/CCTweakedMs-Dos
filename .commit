@@ -1,5 +1,14 @@
+-- -1
 -- 0
+/Ms-Dos/Api/Strings.lua
+/Ms-Dos/Api/Tables.lua
 /Ms-Dos/Commands/update.lua
+/Ms-Dos/Commands/cd.lua
+/Ms-Dos/Commands/delete.lua
+/Ms-Dos/Commands/clear.lua
+/Ms-Dos/Commands/ls.lua
+/Ms-Dos/Essentials/cwd.bin
+/Startup.lua
 -- 1
 /Ms-Dos/Commands/update.lua
 /Ms-Dos/Commands/ls.lua
