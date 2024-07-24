@@ -17,18 +17,18 @@ else
         
         if not line then break end
        
-        if line == "-- "..version then
-            AlrVersion = true
-        end
-        
         if AlrVersion then
             if string.sub(line,1,string.len("-- ")) == "-- " then
                 StrtAdd = true
             end
         end
         
+        if line == "-- "..version then
+            AlrVersion = true
+        end
+        
         if StrtAdd then
-            if not string.sub(line,1,string.len("-- ")) == "-- " then
+            if string.sub(line,1,string.len("-- ")) ~= "-- " then
                 lines[#lines+1] = line
             end
         end
@@ -40,12 +40,19 @@ for i=1,#lines do
         return
     end
     
-    write("Updating "..lines[i].."...")
+    local posX, posY = term.getCursorPos()
+    
+    write("Updating "..lines[i].."...\n")
     local Gfile = http.get("https://raw.githubusercontent.com/Simpfey/CCTweakedMs-Dos/main"..lines[i])
     
     local file = fs.open(lines[i], "w")
     file.write(Gfile.readAll())
     file.close()
     term.clearLine()
-    write("Updating "..lines[i].."... Done!")
+    term.setCursorPos(posX, posY)
+    write("Updating "..lines[i].."... Done!\n")
 end
+
+local Fversion = fs.open("/Ms-Dos/Essentials/Version.bin", "w")
+Fversion.write(Gversion)
+Fversion.close()
