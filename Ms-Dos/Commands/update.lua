@@ -1,5 +1,5 @@
-local Gcommits = http.get("https://raw.githubusercontent.com/Simpfey/CCTweakedMs-Dos/main/.commit")
-local GversionFile = http.get("https://raw.githubusercontent.com/Simpfey/CCTweakedMs-Dos/main/Ms-Dos/Essentials/Version.bin")
+local Gcommits = http.get("https://raw.githubusercontent.com/Simpfey/CCTweakedMs-Dos/main/.commit?cb="..os.epoch("utc"))
+local GversionFile = http.get("https://raw.githubusercontent.com/Simpfey/CCTweakedMs-Dos/main/Ms-Dos/Essentials/Version.bin?cb="..os.epoch("utc"))
 local Fversion = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
 local Gversion = GversionFile.readAll():gsub("\n*$", "")
 local version = Fversion.readAll():gsub("\n*$", "")
