@@ -4,7 +4,7 @@ local Strings = require "Ms-Dos/Api/Strings"
 local Fver = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
 local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
 
-Fcwd.write("/")
+Fcwd.write("")
 Fcwd.close()
 
 local History = {}
