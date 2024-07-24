@@ -37,7 +37,7 @@ while true do
     
     local cmd = Strings.Split(msg, " ")
     
-    if not string.find(cmd[1], ".") then
+    if not string.find(cmd[1], ".lua") then
         cmd[1] = cmd[1]..".lua"
     end
        
