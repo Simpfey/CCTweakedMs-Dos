@@ -5,7 +5,7 @@ local Fver = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
 local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
 
 Fcwd.write("/")
-Fcwd.close()
+Fcwd.close
 
 local History = {}
 local ver = Fver.readLine()
@@ -22,9 +22,9 @@ while true do
     local cwd = Fcwd.readAll():gsub("\n*$","")
     Fcwd.close()
     local files = Tables.Concat(fs.list("/Ms-Dos/Commands/"), fs.list(cwd))
-    
+
     for i=1,#files do
-        files[i] = files[i]:gsub(".lua", "")
+		files[i] = files[i]:gsub(".lua", "")
     end
     
     term.setTextColor(colors.white)
@@ -45,7 +45,7 @@ while true do
         cmd[1] = "/Ms-Dos/Commands/"..cmd[1]
         shell.run(Tables.Unpack(cmd))
     else
-        if fs.exists(cwd..cmd[1]) then
+		if fs.exists(cwd..cmd[1]) then
             cmd[1] = cwd..cmd[1]
             shell.run(Tables.Unpack(cmd))
         else
