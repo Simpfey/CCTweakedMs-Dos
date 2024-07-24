@@ -45,7 +45,7 @@ while true do
         cmd[1] = "/Ms-Dos/Commands/"..cmd[1]
         shell.run(Tables.Unpack(cmd))
     else
-		if fs.exists(cwd..cmd[1]) then
+		if fs.exists(cwd.."/"..cmd[1]) then
             cmd[1] = cwd..cmd[1]
             shell.run(Tables.Unpack(cmd))
         else
