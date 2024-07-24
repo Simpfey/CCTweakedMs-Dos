@@ -1,11 +1,13 @@
 local completion = require "cc.completion"
 local Tables = require "Ms-Dos/Api/Tables"
 local Strings = require "Ms-Dos/Api/Strings"
-local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "r")
 local Fver = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
+local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
+
+Fcwd.write("/")
+Fcwd.close
 
 local History = {}
-
 local ver = Fver.readLine()
 
 Fver.close()
@@ -16,7 +18,9 @@ term.setCursorPos(1,1)
 write("Ms-Dos ver "..ver..".\n")
 
 while true do
+    local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "r")
     local cwd = Fcwd.readAll():gsub("\n*$","")
+    Fcwd.close()
     local files = Tables.Concat(fs.list("/Ms-Dos/Commands/"), fs.list(cwd))
     
     for i=1,#files do
