@@ -45,13 +45,13 @@ while true do
         cmd[1] = "/Ms-Dos/Commands/"..cmd[1]
         shell.run(Tables.Unpack(cmd))
     else
-		if fs.exists(cwd.."/"..cmd[1]) then
-            cmd[1] = cwd.."/"..cmd[1]
-            shell.run(Tables.Unpack(cmd))
-        else
-            term.setTextColor(colors.red)
-            write("File does not exist!\n")
-            term.setTextColor(colors.white)
-        end
+	if fs.exists(cwd.."/"..cmd[1]) then
+		cmd[1] = cwd.."/"..cmd[1]
+	        shell.run(Tables.Unpack(cmd))
+	else
+	        term.setTextColor(colors.red)
+	        write("File does not exist!\n")
+	        term.setTextColor(colors.white)
+	end
     end
 end
