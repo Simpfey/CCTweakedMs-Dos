@@ -4,7 +4,7 @@ local Strings = require "Ms-Dos/Api/Strings"
 local Fver = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
 local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
 
-Fcwd.write("")
+Fcwd.write("/")
 Fcwd.close()
 
 local History = {}
@@ -19,7 +19,7 @@ write("Ms-Dos ver "..ver..".\n")
 
 while true do
     local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "r")
-    local cwd = Fcwd.readAll():gsub("\n*$","").."/"
+    local cwd = Fcwd.readAll():gsub("\n*$","")
     Fcwd.close()
     local files = Tables.Concat(fs.list("/Ms-Dos/Commands/"), fs.list(cwd))
     
