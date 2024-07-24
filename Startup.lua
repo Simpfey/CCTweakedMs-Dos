@@ -46,7 +46,7 @@ while true do
         shell.run(Tables.Unpack(cmd))
     else
 	if fs.exists(cwd.."/"..cmd[1]) then
-		cmd[1] = cwd.."/"..cmd[1]
+		cmd[1] = "/"..cwd.."/"..cmd[1]
 	        shell.run(Tables.Unpack(cmd))
 	else
 	        term.setTextColor(colors.red)
