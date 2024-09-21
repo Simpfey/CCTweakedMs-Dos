@@ -39,7 +39,7 @@ for i=1,#lines do
     for j=1,#lines do
         if i-j ~= 0 then
             if lines[i] == lines[j] then
-                lines[j] == ""
+                lines[j] = ""
             end
         end
     end
