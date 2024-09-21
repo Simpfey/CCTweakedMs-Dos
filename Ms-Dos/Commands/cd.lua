@@ -15,5 +15,5 @@ else
 end
 
 local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
-Fcwd.write(shell.dir())
+Fcwd.write(shell.dir().."/")
 Fcwd.close()
