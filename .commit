@@ -23,3 +23,5 @@
 /Startup.lua
 -- 6
 /Ms-Dos/Commands/update.lua
+-- 7
+/Ms-Dos/Commands/cd.lua
