@@ -25,3 +25,5 @@
 /Ms-Dos/Commands/update.lua
 -- 7
 /Ms-Dos/Commands/cd.lua
+-- 8
+/Ms-Dos/Commands/mkdir.lua
