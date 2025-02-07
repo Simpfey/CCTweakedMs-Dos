@@ -4,7 +4,6 @@
 /Ms-Dos/Api/Tables.lua
 /Ms-Dos/Commands/update.lua
 /Ms-Dos/Commands/cd.lua
-/Ms-Dos/Commands/delete.lua
 /Ms-Dos/Commands/clear.lua
 /Ms-Dos/Commands/ls.lua
 /Ms-Dos/Essentials/cwd.bin
@@ -27,3 +26,8 @@
 /Ms-Dos/Commands/cd.lua
 -- 8
 /Ms-Dos/Commands/mkdir.lua
+-- 9
+/Ms-Dos/Commands/del.lua
+/Ms-Dos/Commands/cp.lua
+/Ms-Dos/Commands/move.lua
+/Ms-Dos/Commands/isReadOnly.lua
