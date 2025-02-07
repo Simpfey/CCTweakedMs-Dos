@@ -33,3 +33,5 @@
 /Ms-Dos/Commands/isReadOnly.lua
 -- 10
 /Ms-Dos/Commands/ls.lua
+-- 11
+/Ms-Dos/Commands/cat.lua
