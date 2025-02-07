@@ -5,9 +5,9 @@ local cwd = Fcwd.readAll():gsub("\n*$","")
 Fcwd.close()
 
 if string.find(args[1], "/") then
-    local File = fs.open(cwd..args[1])
+    local File = fs.open(cwd..args[1], "r")
 else
-    local File = fs.open(cwd.."/"..args[1].."/")
+    local File = fs.open(cwd.."/"..args[1].."/", "r")
 end
 
 local contents = File.readAll()
