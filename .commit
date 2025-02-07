@@ -31,3 +31,5 @@
 /Ms-Dos/Commands/cp.lua
 /Ms-Dos/Commands/move.lua
 /Ms-Dos/Commands/isReadOnly.lua
+-- 10
+/Ms-Dos/Commands/ls.lua
