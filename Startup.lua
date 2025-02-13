@@ -1,6 +1,6 @@
 local completion = require "cc.completion"
-local Tables = require "Ms-Dos/Api/Tables"
-local Strings = require "Ms-Dos/Api/Strings"
+local Tables = require "/Ms-Dos/Api/Tables"
+local Strings = require "/Ms-Dos/Api/Strings"
 local Fver = fs.open("/Ms-Dos/Essentials/Version.bin", "r")
 local Fcwd = fs.open("/Ms-Dos/Essentials/cwd.bin", "w")
 
