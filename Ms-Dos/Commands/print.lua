@@ -29,7 +29,7 @@ if not printer.newPage() then
 end
 
 for i=1,#lines do
-  printer.setCursorPos(pLine, 3)
+  printer.setCursorPos(1, pLine)
   printer.write(lines[i])
 
   pLine = pLine + 1
